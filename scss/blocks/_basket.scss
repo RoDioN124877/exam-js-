@@ -1,0 +1,29 @@
+.basket__all{
+    background-color: rgba(0, 0, 0, 0.493);
+    width: 100%;
+    height: 100%;   
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .basket__header{
+        width: 30%;
+        min-height: 30%;
+        background-color: white;
+        padding: 20px;
+        display: flex;
+        .basket__exe{
+            background-image: url(../img/basket/exe.png);
+            width: 20px;
+            height: 20px;
+            background-size: 100%;
+        }
+        h2{
+            margin: 0px auto;
+            font-weight: 700;
+        }
+    }
+    .basket__conteiner{
+        overflow-y: scroll;
+    }
+}

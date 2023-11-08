@@ -1,0 +1,57 @@
+header{
+    padding: 20px;
+    width: 1440px;
+    margin: auto;
+    .top__header{
+        display: flex;
+        padding-bottom: 20px;
+        justify-content: space-around;
+        .logo{
+            background-image: url(../img/logo.png);
+            background-size: 100%;
+            width: 135px;
+            height: 50px;
+        }
+        .nav{
+            display: flex;
+            gap: 20px;
+        .basket{
+            .basket__logo{
+                background-image: url(../img/header/basket.png);
+            background-size: 100%;
+            width: 50px;
+            height: 50px;
+            }
+        }
+        .account{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .account__logo{
+                background-image: url(../img/header/person.png);
+                background-size: 100%;
+                width: 50px;
+                height: 50px;
+            }
+            } 
+        }
+        
+    }
+    .bottom__header{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        width: 1440px;
+        background-color: rgb(252, 188, 248);
+        ul{
+            display: flex;
+            gap: 100px;
+            li{
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+}
