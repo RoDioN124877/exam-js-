@@ -1,29 +1,83 @@
-.basket__all{
+.basket__all {
     background-color: rgba(0, 0, 0, 0.493);
     width: 100%;
-    height: 100%;   
+    height: 100%;
     position: fixed;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
-    .basket__header{
-        width: 30%;
-        min-height: 30%;
+    flex-direction: column;
+    min-height: 30%;
+    z-index: 5;
+
+    .basket__header {
+        width: 40%;
         background-color: white;
         padding: 20px;
         display: flex;
-        .basket__exe{
+        justify-content: center;
+        align-items: center;
+
+        .basket__exe {
             background-image: url(../img/basket/exe.png);
             width: 20px;
             height: 20px;
             background-size: 100%;
         }
-        h2{
+
+        h2 {
             margin: 0px auto;
             font-weight: 700;
         }
     }
-    .basket__conteiner{
+
+    .basket__conteiner {
         overflow-y: scroll;
+        background-color: white;
+        width: 40%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .card {
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 50px;
+            color: #ce5e83;
+
+            .card_img {
+                width: 100px;
+            }
+
+            .price {
+                color: black;
+            }
+
+            .que_cont {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                p {
+                    color: black;
+                }
+
+                button {
+                    height: 20px;
+                    display: flex;
+                    align-items: center;
+                    border: none;
+                }
+            }
+        }
+    }
+    .all_price{
+        background-color: white;
+        width: 40%;
+        text-align: center;
+        padding: 20px;
     }
 }

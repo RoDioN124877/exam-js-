@@ -1,0 +1,59 @@
+footer {
+    background-color: pink;
+    margin-top: 100px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 1440px;
+    margin: 100px auto 0px auto;
+    .footer__content{
+        display: flex;
+        justify-content: space-between;
+        width: 1440px;
+    }
+    .footer__left {
+      flex: 1;
+      text-align: left;
+    }
+  
+    .footer__center {
+      flex: 2;
+      text-align: center;
+  
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+  
+        li {
+          margin-right: 20px;
+  
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+    }
+  
+    .footer__right {
+      flex: 1;
+      text-align: right;
+  
+      .social__icons {
+        display: flex;
+        .forgera{
+          display: flex;
+          flex-direction: column;
+        }
+
+  
+        a {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  

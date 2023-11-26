@@ -1,57 +1,124 @@
-.cotolog{
+.cotolog {
     width: 1440px;
     margin: auto;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    .container__cotolog{
+
+    .filtr {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+        z-index: 3;
+        padding: 30px;
+        width: 164px;
+        input{
+            border-radius: 10px;
+            border: 0.3px solid black;
+        }
+        select {
+            width: 100px;
+            border-radius: 10px;
+        }
+    }
+
+    .container__cotolog {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: 1440px;
+        max-width: 1440px;
         margin: auto;
         gap: 20px;
         border-top: 1px solid red;
         padding-top: 50px;
-        .card{
+
+        .card {
             width: 250px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
             gap: 10px;
             padding: 50px;
-            border: 1px solid rgba(0, 0, 0, 0.218);
             color: #ce5e83;
-            div{
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+            border-radius: 6px;
+
+            &:hover {
+                &::before {
+                    transition: 1s;
+                    opacity: 1;
+                }
+            }
+
+            &::before {
+                content: 'подробный просмотр';
+                display: block;
+                position: absolute;
+                width: 100px;
+                height: 50px;
+                text-align: center;
+                color: #000;
+                background-color: aliceblue;
+                top: 120px;
+                opacity: 0;
+                cursor: pointer;
+                pointer-events: none;
+
+            }
+
+            .name {
+                font-size: 20px;
+                position: relative;
+            }
+
+            div {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
                 justify-content: center;
-                p{
+
+                p {
                     text-align: center;
-                    color: black
+                    color: black;
 
                 }
-                button{
+
+                button {
                     width: 200px;
-                    background-color: rgb(190, 190, 190);
+                    background-color: rgb(252, 188, 248);
+                    color: black;
                     border: none;
                     padding: 5px;
-                    &:active{
+                    transition: 0.2s;
+
+                    &:active {
                         transform: scale(1.05);
                         transition: 0.1s;
                     }
-                    &:hover{
+
+                    &:hover {
                         cursor: pointer;
-                        background-color: rgb(177, 174, 174);
+                        background-color: rgb(255, 197, 253);
                     }
                 }
             }
-            .card_img{
+
+            .card_img {
                 width: 200px;
                 height: 200px;
+                border-radius: 6px;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
+
         }
+
     }
 }

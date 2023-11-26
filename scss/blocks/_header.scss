@@ -1,53 +1,96 @@
-header{
-    padding: 20px;
+header {
+    padding: 0.1px;
     width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: auto;
-    .top__header{
+   
+
+    .top__header {
         display: flex;
-        padding-bottom: 20px;
+        position: fixed;
+        width: 1440px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         justify-content: space-around;
-        .logo{
+        background-color: white;
+        z-index: 2;
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+
+        .logo {
             background-image: url(../img/logo.png);
             background-size: 100%;
             width: 135px;
             height: 50px;
         }
-        .nav{
+
+        .nav {
             display: flex;
             gap: 20px;
-        .basket{
-            .basket__logo{
-                background-image: url(../img/header/basket.png);
-            background-size: 100%;
-            width: 50px;
-            height: 50px;
+
+            .basket {
+                .basket__logo {
+                    background-image: url(../img/header/basket.png);
+                    background-size: 100%;
+                    width: 50px;
+                    height: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: end;
+                }
+            }
+
+            .account {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 83px;
+
+                .account__logo {
+                    background-image: url(../img/header/person.png);
+                    background-size: 100%;
+                    width: 50px;
+                    height: 50px;
+                    cursor: pointer;
+                }
+
+                .name {
+                    cursor: pointer;
+                }
             }
         }
-        .account{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .account__logo{
-                background-image: url(../img/header/person.png);
-                background-size: 100%;
-                width: 50px;
-                height: 50px;
-            }
-            } 
+
+        .exit__account {
+            display: none;
+            cursor: pointer;
         }
-        
+
+        .account:hover {
+            .exit__account {
+                display: block;
+            }
+        }
+
     }
-    .bottom__header{
+
+    .bottom__header {
         display: flex;
         justify-content: center;
         padding: 20px;
         width: 1440px;
         background-color: rgb(252, 188, 248);
-        ul{
+        margin-top: 103px;
+
+        ul {
             display: flex;
             gap: 100px;
-            li{
-                a{
+
+            li {
+                a {
                     text-decoration: none;
                     color: black;
                 }
