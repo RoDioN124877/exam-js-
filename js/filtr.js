@@ -3,7 +3,6 @@ document.getElementById('priceFilter').addEventListener('change', function() {
     const filteredByPrice = filterByPrice(cards_arrr, priceRange);
     render_all(filteredByPrice);
 });
-cards_arrr.filter(e)
 // Поиск по имени
 document.getElementById('searchInput').addEventListener('input', function() {
     const searchText = this.value.trim().toLowerCase();
