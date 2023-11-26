@@ -162,6 +162,18 @@ table {
 .cotolog .container__cotolog .card .card_img:hover {
   cursor: pointer;
 }
+.cotolog .show__all {
+  border-radius: 10px;
+  border: 0;
+}
+.cotolog .show__all:active {
+  transform: scale(1.05);
+  transition: 0.1s;
+}
+.cotolog .show__all:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
 
 header {
   padding: 0.1px;

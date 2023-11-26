@@ -14,10 +14,12 @@
         z-index: 3;
         padding: 30px;
         width: 164px;
-        input{
+
+        input {
             border-radius: 10px;
             border: 0.3px solid black;
         }
+
         select {
             width: 100px;
             border-radius: 10px;
@@ -121,5 +123,19 @@
 
         }
 
+    }
+
+    .show__all {
+        border-radius: 10px;
+        border: 0;
+        &:active {
+            transform: scale(1.05);
+            transition: 0.1s;
+        }
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.9;
+        }
     }
 }
