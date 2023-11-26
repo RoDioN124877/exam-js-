@@ -3,7 +3,6 @@ let card_info_content = document.querySelector('.card_info_content')
 
 document.querySelector('.card_info_exe').addEventListener("click", () => {
     prosmotr.style.display = "none";
-    console.log(prosmotr);
 });
 
 function render_prosmotr(elem, origin, temperament) {
@@ -13,7 +12,7 @@ function render_prosmotr(elem, origin, temperament) {
         <div class="card_info_detail">
             <p class="card_info_name">Имя: ${elem.parentNode.querySelector(".name").innerHTML}</p>
             <p class="card_info_count">Страна: ${origin}</p>
-            <p class="card_info_temper">Темперамент ${temperament}</p>
+            <p class="card_info_temper">Темперамент: ${temperament}</p>
         </div>
         </div>
         <div class="card_info_bying">
@@ -23,8 +22,6 @@ function render_prosmotr(elem, origin, temperament) {
     </div>
     `
     document.querySelector('.card_info_buy').addEventListener("click",()=>{
-        console.log(elem.parentNode);
-        console.log(elem.parentNode.querySelector('.buy_btn'));
         add_basket(elem.parentNode.querySelector('.buy_btn')) 
     })
 }

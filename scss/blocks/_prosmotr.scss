@@ -13,12 +13,12 @@
     .card_info_all {
         width: 30%;
         height: 50%;
-        background-color: aliceblue;
+        background-color: white;
         text-align: center;
-
+        border-radius: 10px;
         .card_info_header {
             padding: 20px 10px;
-            gap: 100px;
+            gap: 170px;
             display: flex;
 
             .card_info_exe {
@@ -42,6 +42,7 @@
                 img {
                     width: 200px;
                     height: 200px;
+                    border-radius: 10px;
                 }
 
                 .card_info_detail {
@@ -60,6 +61,24 @@
                 flex-direction: column;
                 justify-content: center;
                 gap: 5px;
+                .card_info_buy{
+                    width: 100px;
+                    background-color: rgb(252, 188, 248);
+                    color: black;
+                    border: none;
+                    padding: 5px;
+                    transition: 0.2s;
+                    border-radius: 10px;
+
+                    &:active {
+                        transform: scale(1.05);
+                        transition: 0.1s;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: rgb(255, 197, 253);
+                    }                }
             }
         }
     }

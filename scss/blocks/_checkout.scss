@@ -1,0 +1,76 @@
+.main-content {
+    .order-section {
+        background-color: #fff;
+        padding: 40px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .order-section h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    #order-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #order-form label,
+    #order-form input,
+    #order-form select {
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #order-form input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #order-form input[type="submit"]:hover {
+        background-color: #555;
+    }
+
+    /* Стили для раздела "Ваш заказ" */
+    .cart-section {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart-section h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .cart-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        img {
+            width: 50px;
+            height: auto;
+            margin-right: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+
+    .total {
+        margin-top: 20px;
+        border-top: 1px solid #ccc;
+        padding-top: 15px;
+        font-weight: bold;
+    }
+}

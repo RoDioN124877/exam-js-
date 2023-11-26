@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - CutCat</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@500;700&display=swap" rel="stylesheet">
-    <title>CutCat</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
         integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 </head>
 
 <body>
-    <section class="card_info">
-        <div class="card_info_all">
-            <div class="card_info_header">
-                <div class="card_info_exe"></div>
-                <h2>Подробный просмотр</h2>
-            </div>
-            <div class="card_info_content">
 
-            </div>
-        </div>
-    </section>
     <section class="basket__all">
         <div class="basket__header">
             <div class="basket__exe"></div>
@@ -43,7 +31,9 @@
     </section>
     <header>
         <div class="top__header">
-            <div class="logo"></div>
+            <a href="index.html">
+                <div class="logo"></div>
+            </a>
             <div class="nav">
                 <div class="basket">
                     <div class="basket__logo">0</div>
@@ -64,21 +54,30 @@
             </ul>
         </div>
     </header>
-    <main>
-        <section class="cotolog" id="catologContainer">
-            <div class="filtr" id="filtr">
-                <input type="text" id="searchInput" placeholder="Поиск по имени">
-                <select id="priceFilter">
-                    <option value="all">Все цены</option>
-                    <option value="5000-20000">От 5000 до 20000</option>
-                    <option value="20000-50000">От 20000 до 50000</option>
-                    <option value="50000-120000">От 50000 до 120000</option>
-                </select>
-            </div>
-            <h2 id="titel_cotici">Котики</h2>
 
-            <div class="container__cotolog"></div>
-            <button class="show__all">Показать еще</button>
+    <main class="main-content">
+        <section class="about-section">
+            <div class="container">
+                <h2 class="fade-in">Добро пожаловать в CutCat!</h2>
+                <p class="slide-up">
+                    Мы - команда настоящих ценителей кошачьей красоты и неповторимого очарования.
+                    Наш магазин не просто предлагает котов, он создан из любви к этим прекрасным животным
+                    и стремления сделать их жизнь лучше.
+                </p>
+                <h2>Наши счастливые покупатели</h2>
+                <div class="image-gallery fade-in">
+                    <img src="img/about/1people_revie.jpeg" alt="Кот 1">
+                    <img src="img/about/2people_revie.jpeg" alt="Кот 2">
+                    <img src="img/about/3people_revie.jpeg" alt="Кот 3">
+                </div>
+                <p class="slide-up">
+                    Мы предоставляем только самых заботливых и здоровых котов, готовых стать вашими верными
+                    друзьями и членами семьи.
+                </p>
+                <p class="fade-in">
+                    Посетите наш магазин и найдите своего идеального пушистого спутника уже сегодня!
+                </p>
+            </div>
         </section>
     </main>
     <footer>
@@ -95,8 +94,7 @@
             </div>
             <div class="footer__right">
                 <div class="social__icons">
-                    <a target="_blank" href="https://www.instagram.com/rodion_ch/"><img src="img/social media/inst.png"
-                            alt=""></a>
+                    <a target="_blank" href="https://www.instagram.com/rodion_ch/"><img src="img/social media/inst.png" alt=""></a>
                     <a target="_blank" href="https://t.me/prvboiwww"><img src="img/social media/tg.png" alt=""></a>
                     <a target="_blank" href="https://rodion124877.github.io/cxzczxc/">webSite</a>
                 </div>
@@ -104,14 +102,9 @@
         </div>
         <p>отдельная благодарность за помощь: Гера Трифонова</p>
     </footer>
-
-    <script src="js/render_pets.js"></script>
     <script src="js/basket.js"></script>
-    <script src="js/prosmotr.js"></script>
     <script src="js/autoris.js"></script>
     <script src="js/acount.js"></script>
-    <script src="js/filtr.js"></script>
-    <script src="js/jquery_filtr.js"></script>
 </body>
 
 </html>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@500;700&display=swap" rel="stylesheet">
-    <title>CutCat</title>
+    <title>CutCat-контакты</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&display=swap" rel="stylesheet">
@@ -19,17 +19,6 @@
 </head>
 
 <body>
-    <section class="card_info">
-        <div class="card_info_all">
-            <div class="card_info_header">
-                <div class="card_info_exe"></div>
-                <h2>Подробный просмотр</h2>
-            </div>
-            <div class="card_info_content">
-
-            </div>
-        </div>
-    </section>
     <section class="basket__all">
         <div class="basket__header">
             <div class="basket__exe"></div>
@@ -64,21 +53,32 @@
             </ul>
         </div>
     </header>
-    <main>
-        <section class="cotolog" id="catologContainer">
-            <div class="filtr" id="filtr">
-                <input type="text" id="searchInput" placeholder="Поиск по имени">
-                <select id="priceFilter">
-                    <option value="all">Все цены</option>
-                    <option value="5000-20000">От 5000 до 20000</option>
-                    <option value="20000-50000">От 20000 до 50000</option>
-                    <option value="50000-120000">От 50000 до 120000</option>
-                </select>
+    <main class="main-content">
+        <section class="contact-section">
+            <div class="container">
+                <h2>Наши контакты</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Адрес</h3>
+                        <p>где-то в сан франциско</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Телефон</h3>
+                        <p>88005353535</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p>CutCat@kitkat.com</p>
+                    </div>
+                </div>
+                <div class="map">
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d188979.22760291186!2d-122.41941557511417!3d37.774929595623085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1618956018635!5m2!1sen!2suk"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
             </div>
-            <h2 id="titel_cotici">Котики</h2>
-
-            <div class="container__cotolog"></div>
-            <button class="show__all">Показать еще</button>
         </section>
     </main>
     <footer>
@@ -104,14 +104,6 @@
         </div>
         <p>отдельная благодарность за помощь: Гера Трифонова</p>
     </footer>
-
-    <script src="js/render_pets.js"></script>
-    <script src="js/basket.js"></script>
-    <script src="js/prosmotr.js"></script>
-    <script src="js/autoris.js"></script>
-    <script src="js/acount.js"></script>
-    <script src="js/filtr.js"></script>
-    <script src="js/jquery_filtr.js"></script>
 </body>
 
 </html>

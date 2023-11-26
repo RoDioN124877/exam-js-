@@ -18,7 +18,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     event.preventDefault();
     const newUsername = document.getElementById('newUsername').value;
     const newPassword = document.getElementById('newPassword').value;
-    console.log(localStorage.newUsername);
     if (localStorage.getItem(newUsername)) {
       alert('Пользователь с таким именем уже существует.');
     } else {

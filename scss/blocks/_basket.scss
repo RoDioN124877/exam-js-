@@ -79,5 +79,21 @@
         width: 40%;
         text-align: center;
         padding: 20px;
+        
+    }
+    .zakazat{
+        width: 100px;
+        border-radius: 20px;
+        border: 0;
+        margin-top: 20px;
+        &:active {
+            transform: scale(1.05);
+            transition: 0.1s;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(229, 229, 229);
+        }
     }
 }

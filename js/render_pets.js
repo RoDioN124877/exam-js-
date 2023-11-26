@@ -39,7 +39,7 @@ function render_all(elem) {
             <img src="${e.url}" class="card_img">
             <p class="name">${e.breeds[0].name}</p>
             <div>
-                <p class="price">${(e.breeds[0].name.length) * 1000} ₸</p>
+                <p class="price">${(e.breeds[0].name.length) * 2000} ₸</p>
                 <button class="buy_btn">buy</button>
             </div>
         </div>`;
@@ -48,7 +48,6 @@ function render_all(elem) {
     const buy_btn = document.querySelectorAll('.buy_btn');
     buy_btn.forEach(e => {
         e.addEventListener('click', () => {
-            console.log(e);
             add_basket(e);
         });
     });

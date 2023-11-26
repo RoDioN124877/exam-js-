@@ -1,3 +1,6 @@
+.body__auto{
+  background-image: url('../img/auto/213.jpg');
+}
 .autoris {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,14 +8,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f4;
   animation: fadein 1s;
+  height: 900px;
 
   form {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    background-color: white;
+    padding: 20px 50px;
   }
 
   .container {

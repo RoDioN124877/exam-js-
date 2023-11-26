@@ -26,12 +26,13 @@ function add_basket(e) {
             if (existingCard.querySelector(".name").innerHTML == card.querySelector('.name').innerHTML) {
                 let quantityInput = existingCard.querySelector('.que_cont').querySelector(".quee");
                 quantityInput.innerHTML = parseInt(quantityInput.innerHTML) + 1;
-                console.log(quantityInput);
+                all_price_num += Number(card.querySelector('div').querySelector('p').innerHTML.slice(0, -1).slice(0, -1))
+                all_price.innerHTML = `сумма: ${numMask(all_price_num)}`
+                saveBasketToLocalStorage();
                 cartFound = true;
             }
         });
         if (!cartFound) {
-            console.log(card.querySelector(".name").innerHTML);
             renderAtBasket(card);
         }
     } else {
@@ -218,7 +219,6 @@ function loadBasketFromLocalStorage() {
         elem.addEventListener('click', () => {
             let quantityInput = elem.parentNode.querySelector(".quee");
             all_price_num += Number(elem.parentNode.parentNode.parentNode.querySelector('div').querySelector('.price').innerHTML.slice(0, -1).slice(0, -1))
-            console.log(elem.parentNode.parentNode.parentNode.querySelector('div').querySelector('.price').innerHTML.slice(0, -1).slice(0, -1));
             all_price.innerHTML = `сумма: ${numMask(all_price_num)}`
             quantityInput.innerHTML = parseInt(quantityInput.innerHTML) + 1;
             updateBasketValue();
@@ -228,5 +228,14 @@ function loadBasketFromLocalStorage() {
     });
     
 }
+
+document.querySelector('.zakazat').addEventListener('click',()=>{
+    if(document.querySelector('.account').querySelector('.name').innerHTML != "Войдите в аккаунт"){
+        window.location.href = 'checkout.html'; 
+    }
+    else{
+        alert("Сначало войдите в аккаунт")
+    }
+})
 
 window.addEventListener('load', loadBasketFromLocalStorage);
