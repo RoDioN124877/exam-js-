@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Загрузка корзины из локального хранилища
     const cartItems = JSON.parse(localStorage.getItem('корзина')) || [];
     const cartContainer = document.getElementById('cart-items');
     const totalQuantity = document.getElementById('total-quantity');
@@ -35,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         totalQuantity.textContent = quantity;
-        totalPrice.textContent = `$${total.toFixed(2)}`;
+        totalPrice.textContent = `${total}`;
     }
 
     displayCartItems();

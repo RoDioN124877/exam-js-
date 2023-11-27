@@ -23,3 +23,11 @@ function filterByPrice(cards, priceRange) {
 function filterByName(cards, searchText) {
     return cards.filter(e => e.breeds[0].name.toLowerCase().includes(searchText));
 }
+document.getElementById('searchInput').addEventListener('input', function() {
+    if (document.querySelector('.container__cotolog').querySelectorAll('.card').length == 0) {
+        document.querySelector('.info_ppp').innerHTML = "Ничего не найдено"
+    }
+    else{
+        document.querySelector('.info_ppp').innerHTML = " "
+    }
+});

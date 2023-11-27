@@ -67,9 +67,9 @@ function renderAtBasket(cart) {
 
         let minusButtons = newCartItem.querySelectorAll(".minus");
         let plusButtons = newCartItem.querySelectorAll(".plus");
-        allplus.push(plusButtons[plusButtons.length-1])
-        allminus.push(minusButtons[minusButtons.length-1])
-        
+        allplus.push(plusButtons[plusButtons.length - 1])
+        allminus.push(minusButtons[minusButtons.length - 1])
+        check_colvo()
         minusButtons.forEach(elem => {
             elem.addEventListener('click', () => {
                 let quantityInput = elem.parentNode.querySelector(".quee");
@@ -85,9 +85,9 @@ function renderAtBasket(cart) {
 
             });
         });
-    
-        
-        
+
+
+
 
         plusButtons.forEach(elem => {
             elem.addEventListener('click', () => {
@@ -100,7 +100,7 @@ function renderAtBasket(cart) {
 
             });
         });
-   
+
     }
     saveBasketToLocalStorage();
 
@@ -111,8 +111,8 @@ function updateBasketValue() {
         basketValue += parseInt(elem.innerHTML);
     });
     basket_open.querySelector('.basket__logo').innerText = basketValue;
-    
-}     
+    check_colvo()
+}
 function numMask(num) {
     let num_str = num.toString();
     let ln = num_str.length;
@@ -131,7 +131,7 @@ function numMask(num) {
 }
 
 function saveBasketToLocalStorage() {
-    let корзина = []; 
+    let корзина = [];
 
     let cartItems = basket__conteiner.querySelectorAll('.card');
     cartItems.forEach(item => {
@@ -142,7 +142,7 @@ function saveBasketToLocalStorage() {
 
         let cartItem = {
             название: itemName,
-            цена: itemPrice,    
+            цена: itemPrice,
             количество: itemQuantity,
             src: itemImageSrc
         };
@@ -181,12 +181,12 @@ function loadBasketFromLocalStorage() {
                 `;
                 basket__conteiner.appendChild(newCartItem);
             }
-            
+
         });
-        
+
     }
-    
-    
+
+
     let savedTotalQuantity = localStorage.getItem('общее_количество');
     let savedTotalPrice = localStorage.getItem('общая_цена');
     if (savedTotalQuantity && savedTotalPrice) {
@@ -195,10 +195,10 @@ function loadBasketFromLocalStorage() {
         all_price.innerHTML = `сумма: ${numMask(all_price_num)}`;
         basket_open.querySelector('.basket__logo').innerText = basketValue;
     }
-       
+
     let minus = document.querySelectorAll(".minus");
     let plus = document.querySelectorAll(".plus");
-    
+
     minus.forEach(elem => {
         elem.addEventListener('click', () => {
             let quantityInput = elem.parentNode.querySelector(".quee");
@@ -226,16 +226,32 @@ function loadBasketFromLocalStorage() {
 
         });
     });
-    
+    check_colvo()
 }
 
-document.querySelector('.zakazat').addEventListener('click',()=>{
-    if(document.querySelector('.account').querySelector('.name').innerHTML != "Войдите в аккаунт"){
-        window.location.href = 'checkout.html'; 
+document.querySelector('.zakazat').addEventListener('click', () => {
+    if (document.querySelector('.account').querySelector('.name').innerHTML != "Войдите в аккаунт") {
+        if(all_price_num != 0){
+            window.location.href = 'checkout.html';
+        }
+        else{
+            alert("вы не можете купить ничего")
+        }
     }
-    else{
+    else {
         alert("Сначало войдите в аккаунт")
     }
 })
+
+function check_colvo() {
+    if (basket__conteiner.querySelectorAll(".card").length == 0) {
+        document.querySelector(".basket_empty").style.display = "block"
+        console.log("s");
+    }
+    else{
+        document.querySelector(".basket_empty").style.display = "none"
+
+    }
+}
 
 window.addEventListener('load', loadBasketFromLocalStorage);
