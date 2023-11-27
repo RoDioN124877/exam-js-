@@ -199,6 +199,8 @@ function loadBasketFromLocalStorage() {
     let minus = document.querySelectorAll(".minus");
     let plus = document.querySelectorAll(".plus");
 
+
+    
     minus.forEach(elem => {
         elem.addEventListener('click', () => {
             let quantityInput = elem.parentNode.querySelector(".quee");
@@ -246,7 +248,6 @@ document.querySelector('.zakazat').addEventListener('click', () => {
 function check_colvo() {
     if (basket__conteiner.querySelectorAll(".card").length == 0) {
         document.querySelector(".basket_empty").style.display = "block"
-        console.log("s");
     }
     else{
         document.querySelector(".basket_empty").style.display = "none"

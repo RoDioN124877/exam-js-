@@ -17,12 +17,15 @@
 
         input {
             border-radius: 10px;
-            border: 0.3px solid black;
+            border: 1px solid black;
+            text-align: center;
+            padding: 2px 5px ;
         }
 
         select {
             width: 100px;
             border-radius: 10px;
+            text-align: center;
         }
     }
 
@@ -92,7 +95,7 @@
 
                 button {
                     width: 200px;
-                    background-color: rgb(252, 188, 248);
+                    background-color: $ac_cl;
                     color: black;
                     border: none;
                     padding: 5px;
@@ -132,6 +135,8 @@
     .show__all {
         border-radius: 10px;
         border: 0;
+        padding: 10px 0;
+        background-color: rgb(212, 211, 211);
         &:active {
             transform: scale(1.05);
             transition: 0.1s;

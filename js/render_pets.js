@@ -1,6 +1,7 @@
 let cards_arrr = [];
 const cont = document.querySelector('.container__cotolog');
 let pets_value = 8;
+const itemAddedPopups = document.querySelector('.item-added-popup');
 function get_pet_id() {
     const promises = [];
     for (let i = 0; i < pets_value; i++) {
@@ -51,6 +52,8 @@ function render_all(elem) {
             add_basket(e);
         });
     });
+
+    
 
     const card_img = document.querySelectorAll(".card_img");
     card_img.forEach((e, i) => {
