@@ -40,7 +40,7 @@
         padding-top: 50px;
 
         .card {
-            width: 250px;
+            width: 350px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -62,7 +62,9 @@
 
             &::before {
                 content: 'подробный просмотр';
-                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 position: absolute;
                 width: 100px;
                 height: 50px;
@@ -73,7 +75,7 @@
                 opacity: 0;
                 cursor: pointer;
                 pointer-events: none;
-
+                border-radius: 10px;
             }
 
             .name {

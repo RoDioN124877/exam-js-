@@ -32,7 +32,7 @@ async function push_pet() {
 }
 
 function render_all(elem) {
-    cont.innerHTML = ''; // Очищаем контейнер перед отрисовкой
+    cont.innerHTML = ''; 
 
     elem.forEach(e => {
         cont.innerHTML += `
@@ -40,7 +40,7 @@ function render_all(elem) {
             <img src="${e.url}" class="card_img">
             <p class="name">${e.breeds[0].name}</p>
             <div>
-                <p class="price">${(e.breeds[0].name.length) * 2000} ₸</p>
+                <p class="price">${(e.breeds[0].name.length) * 3000} ₸</p>
                 <button class="buy_btn">buy</button>
             </div>
         </div>`;

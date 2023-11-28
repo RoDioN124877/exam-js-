@@ -200,7 +200,7 @@ function loadBasketFromLocalStorage() {
     let plus = document.querySelectorAll(".plus");
 
 
-    
+
     minus.forEach(elem => {
         elem.addEventListener('click', () => {
             let quantityInput = elem.parentNode.querySelector(".quee");
@@ -233,10 +233,10 @@ function loadBasketFromLocalStorage() {
 
 document.querySelector('.zakazat').addEventListener('click', () => {
     if (document.querySelector('.account').querySelector('.name').innerHTML != "Войдите в аккаунт") {
-        if(all_price_num != 0){
+        if (all_price_num != 0) {
             window.location.href = 'checkout.html';
         }
-        else{
+        else {
             alert("вы не можете купить ничего")
         }
     }
@@ -249,7 +249,7 @@ function check_colvo() {
     if (basket__conteiner.querySelectorAll(".card").length == 0) {
         document.querySelector(".basket_empty").style.display = "block"
     }
-    else{
+    else {
         document.querySelector(".basket_empty").style.display = "none"
 
     }

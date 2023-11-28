@@ -5,6 +5,7 @@
 */
 * {
   font-family: 'Exo 2', sans-serif;
+  box-sizing: border-box;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -100,7 +101,7 @@ table {
 }
 
 .cotolog .container__cotolog .card {
-  width: 250px;
+  width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,7 +122,9 @@ table {
 
 .cotolog .container__cotolog .card::before {
   content: 'подробный просмотр';
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   width: 100px;
   height: 50px;
@@ -132,6 +135,7 @@ table {
   opacity: 0;
   cursor: pointer;
   pointer-events: none;
+  border-radius: 10px;
 }
 
 .cotolog .container__cotolog .card .name {
@@ -309,12 +313,13 @@ header .bottom__header ul li a {
 }
 
 .basket__all .basket__header {
-  width: 40%;
+  width: 700px;
   background-color: white;
   padding: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  border-radius: 10px 10px 0 0;
 }
 
 .basket__all .basket__header .basket__exe {
@@ -325,18 +330,21 @@ header .bottom__header ul li a {
 }
 
 .basket__all .basket__header h2 {
-  margin: 0px auto;
+  margin: 0px 0px 0px 0px;
   font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .basket__all .basket__conteiner {
   overflow-y: scroll;
   background-color: white;
-  width: 40%;
+  width: 700px;
   padding: 20px;
+  padding-right: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 30px;
 }
 
 .basket__all .basket__conteiner .card {
@@ -345,12 +353,14 @@ header .bottom__header ul li a {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  padding: 50px;
+  padding: 20px;
   color: #ce5e83;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
 }
 
 .basket__all .basket__conteiner .card .card_img {
   width: 100px;
+  border-radius: 10px;
 }
 
 .basket__all .basket__conteiner .card .price {
@@ -376,16 +386,17 @@ header .bottom__header ul li a {
 
 .basket__all .all_price {
   background-color: white;
-  width: 40%;
+  width: 700px;
   text-align: center;
   padding: 20px;
 }
 
 .basket__all .zakazat {
-  width: 100px;
+  width: 200px;
   border-radius: 20px;
   border: 0;
   margin-top: 20px;
+  height: 40px;
 }
 
 .basket__all .zakazat:active {
@@ -512,6 +523,7 @@ header .bottom__header ul li a {
   margin-bottom: 20px;
   background-color: white;
   padding: 20px 50px;
+  width: 400px;
 }
 
 .autoris .container {
@@ -550,7 +562,6 @@ header .bottom__header ul li a {
 
 .autoris #signupForm {
   display: none;
-  width: 200px;
 }
 
 .autoris #signupForm p {
@@ -561,10 +572,6 @@ header .bottom__header ul li a {
 .autoris #signupForm .eror_5 {
   display: none;
   margin-bottom: 10px;
-}
-
-.autoris #loginForm {
-  width: 200px;
 }
 
 .autoris #loginForm p {

@@ -15,7 +15,7 @@ function filterByPrice(cards, priceRange) {
 
     const [min, max] = priceRange.split('-').map(Number);
     return cards.filter(e => {
-        const price = e.breeds[0].name.length * 2000;
+        const price = e.breeds[0].name.length * 3000;
         return price >= min && price <= max;
     });
 }

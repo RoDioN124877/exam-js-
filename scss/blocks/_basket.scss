@@ -11,12 +11,13 @@
     z-index: 5;
 
     .basket__header {
-        width: 40%;
+        width: 700px;
         background-color: white;
         padding: 20px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        border-radius: 10px 10px 0 0 ;
 
         .basket__exe {
             background-image: url(../img/basket/exe.png);
@@ -26,31 +27,36 @@
         }
 
         h2 {
-            margin: 0px auto;
+            margin: 0px 0px 0px 0px;
             font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+
         }
     }
 
     .basket__conteiner {
         overflow-y: scroll;
         background-color: white;
-        width: 40%;
+        width: 700px;
         padding: 20px;
+        padding-right: 0px;
         
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 30px;
         .card {
             width: 200px;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 10px;
-            padding: 50px;
+            padding: 20px;
             color: #ce5e83;
-
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
             .card_img {
                 width: 100px;
+                border-radius: 10px;
             }
 
             .price {
@@ -77,16 +83,17 @@
     }
     .all_price{
         background-color: white;
-        width: 40%;
+        width: 700px;
         text-align: center;
         padding: 20px;
         
     }
     .zakazat{
-        width: 100px;
+        width: 200px;
         border-radius: 20px;
         border: 0;
         margin-top: 20px;
+        height: 40px;
         &:active {
             transform: scale(1.05);
             transition: 0.1s;
